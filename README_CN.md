@@ -3,10 +3,10 @@
 ## 集成说明
 Newdex需要钱包提供一些必要的接口以进行交互。接口必须注入到Window的scatter变量中。具体接口请看下面的列表。
 
-## 需要的接口列表
+## 需要的接口列表
 
-### 事件 scatterLoaded
-当钱包往页面注入JS完成后，需要触发一个CustomEvent，名称为"scatterLoaded"，然后在 scatter.identity需要提供当前显示的eos账户信息，格式参与scatter.getIdentity()返回的结果
+### 事件 scatterLoaded
+当钱包往页面注入JS完成后，需要触发一个CustomEvent，名称为"scatterLoaded"
 
 ### 方法 scatter.getIdentity(networks)
 参数networks示例
