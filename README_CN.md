@@ -9,8 +9,8 @@ Newdex需要钱包提供一些必要的接口以进行交互。接口必须注�
 当钱包往页面注入JS完成后，需要触发一个CustomEvent，名称为"scatterLoaded"
 
 ### 方法 scatter.getIdentity(networks)
-说明：获取钱包的当前账号信息
-参数：networks，示例如下
+说明：获取钱包的当前账号信息  
+参数：networks，示例如下  
 ```
 {
     accounts: [{
@@ -41,12 +41,12 @@ Newdex需要钱包提供一些必要的接口以进行交互。接口必须注�
 ```
 
 ### 方法 scatter.forgetIdentity()
-说明：退出登录
+说明：退出登录  
 
 ### 方法 scatter.eos(network, Eos, eosOptions)
-说明：获取Eos对象
+说明：获取Eos对象  
 
-参数：network，同上说明
+参数：network，同上说明  
 参数：Eos，就是eosjs类（v16.0.9）  
 参数：eosOptions，这是一些eos对应的配置项
 
@@ -54,7 +54,6 @@ Newdex需要钱包提供一些必要的接口以进行交互。接口必须注�
 
 ### 方法 scatter.getArbitrarySignature(publicKey, data)
 
-钱包通过提供的publicKey配对的私钥来对data内容进行签名
-
-返回直接是签名的结果
+说明：钱包通过提供的publicKey配对的私钥来对data内容进行签名  
+返回：直接是签名的结果
 
