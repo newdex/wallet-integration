@@ -9,7 +9,8 @@ Newdex需要钱包提供一些必要的接口以进行交互。接口必须注�
 当钱包往页面注入JS完成后，需要触发一个CustomEvent，名称为"scatterLoaded"
 
 ### 方法 scatter.getIdentity(networks)
-参数networks示例
+说明：获取钱包的当前账号信息
+参数：networks，示例如下
 ```
 {
     accounts: [{
@@ -21,7 +22,7 @@ Newdex需要钱包提供一些必要的接口以进行交互。接口必须注�
     }]
 }
 ```
-返回Promise，正常的结果示例
+返回：返回Promise对象，得到的正常的结果示例如下
 ```
 {
     accounts: [{
@@ -39,23 +40,17 @@ Newdex需要钱包提供一些必要的接口以进行交互。接口必须注�
 }
 ```
 
+### 方法 scatter.forgetIdentity()
+说明：退出登录
+
 ### 方法 scatter.eos(network, Eos, eosOptions)
-获取Eos对象
+说明：获取Eos对象
 
-参数network示例
-```
-{
-    blockchain: 'eos',
-    protocol: 'https',
-    host: 'eos.newdex.one',
-    port: 443,
-    chainId: 'aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906'
-}
-```
-参数Eos就是eosjs类（v16.0.9）  
-参数eosOptions是一些eos对应的配置项
+参数：network，同上说明
+参数：Eos，就是eosjs类（v16.0.9）  
+参数：eosOptions，这是一些eos对应的配置项
 
-返回结果：返回实例化的eos对象，Newdex可以用此对象直接执行eos.transcation(...)方法并调出授权界面  
+返回：返回实例化的eos对象，Newdex可以用此对象直接执行eos.transcation(...)方法并调出授权界面  
 
 ### 方法 scatter.getArbitrarySignature(publicKey, data)
 
